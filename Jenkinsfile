@@ -21,7 +21,6 @@ pipeline {
         }
     stage('Deploy to dev environment'){
             agent { label 'slave01' }
-           # when { branch "master" }
             steps{
 
             dir('/home/jenkins/deploy/test-multi/'){
