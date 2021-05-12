@@ -19,5 +19,11 @@ pipeline {
                 sh 'echo fine'
             }
         }
+    stage('Deploy to dev environment'){
+            agent { label 'slave01' }
+            when { branch "master" }
+            steps{
+                    sh 'echo outofdocker'
+      }
   }
 }
