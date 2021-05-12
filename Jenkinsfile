@@ -8,10 +8,11 @@ pipeline {
                 sh 'node --version'
             }
         }
-    }
+    
         stage('code coverage') {
             steps {
                 sh 'echo code testing'
         }
     }
+  }
 }
