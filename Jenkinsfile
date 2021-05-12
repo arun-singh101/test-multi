@@ -9,4 +9,12 @@ pipeline {
             }
         }
     }
+    stages {
+         stage ('code coverage'){
+        steps {
+        sh 'echo code testing'
+}
+}
+           
+}
 }
