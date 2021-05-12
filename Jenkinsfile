@@ -14,5 +14,10 @@ pipeline {
                 sh 'echo code testing'
         }
     }
+       stage('finalize') {
+            steps {
+                sh 'echo fine'
+            }
+        }
   }
 }
