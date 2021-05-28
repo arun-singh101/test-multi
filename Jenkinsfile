@@ -27,15 +27,15 @@ pipeline {
             dir('/home/jenkins/deploy/test-multi/'){
 
                    echo "Shutting down old deployment."
-                   sh 'docker-compose -p web down --rmi local'
+                   sh 'docker-compose down --rmi local'
                    echo "Cleaning the deployment directory."
                    sh 'rm -rf /home/ubuntu/deploy/test-multi/* '
                    echo "Checking out new version."
                    checkout scm
                    echo "Building the services."
-                   sh 'docker-compose -p web up -d --build --force-recreate'
+                   sh 'docker-compose up -d --build --force-recreate'
                    echo "Display services."
-                   sh 'docker-compose -p web ps'
+                   sh 'docker-compose ps'
                    echo "Done."
       }
      }
