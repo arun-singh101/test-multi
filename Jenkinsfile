@@ -19,6 +19,7 @@ pipeline {
                 sh 'echo fine'
             }
         }
+}
     stage('Deploy to dev environment'){
             agent { label 'slave01' }
             steps{
@@ -36,7 +37,7 @@ pipeline {
                    echo "Display services."
                    sh 'docker-compose -p web ps'
                    echo "Done."
-      }
+      
      }
   }
 }
