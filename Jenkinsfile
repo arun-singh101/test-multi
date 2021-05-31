@@ -24,7 +24,7 @@ pipeline {
             agent { label 'slave01' }
             steps{
 
-            dir('/home/jenkins/deploy/test-multi/'){
+          /*  dir('/home/jenkins/deploy/test-multi/'){
 
                    echo "Shutting down old deployment."
                    sh 'docker-compose down --rmi local'
@@ -36,7 +36,11 @@ pipeline {
                    sh 'docker-compose up -d --build --force-recreate'
                    echo "Display services."
                    sh 'docker-compose ps'
-                   echo "Done."
+                   echo "Done."   
+                   */
+                sh 'ip a'
+                sh 'pwd'
+                
       }
      }
   }
