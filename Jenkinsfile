@@ -36,12 +36,14 @@ pipeline {
                    sh 'docker-compose up -d --build --force-recreate'
                    echo "Display services."
                    sh 'docker-compose ps'
-                   echo "Done."   
+                   echo "Done." 
+                   }
                    */
+            
                 sh 'ip a'
                 sh 'pwd'
                 
-      }
+      
      }
   }
 }
