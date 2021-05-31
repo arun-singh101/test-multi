@@ -29,7 +29,7 @@ pipeline {
                    echo "Shutting down old deployment."
                    sh 'docker-compose down --rmi local'
                    echo "Cleaning the deployment directory."
-                   sh 'rm -rf /home/ubuntu/deploy/test-multi/* '
+                   sh 'rm -rf /home/jenkins/deploy/test-multi/* '
                    echo "Checking out new version."
                    checkout scm
                    echo "Building the services."
