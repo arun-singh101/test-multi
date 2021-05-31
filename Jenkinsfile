@@ -1,20 +1,21 @@
 pipeline {
-    agent {
-        docker { image 'node:14-alpine' }
-    }
+       agent { label 'slave01' }
     stages {
         stage('Test') {
+             docker { image 'node:14-alpine' }
             steps {
                 sh 'node --version'
             }
         }
     
         stage('code coverage') {
+            docker { image 'node:14-alpine' }
             steps {
                 sh 'echo code testing'
         }
     }
        stage('finalize') {
+           docker { image 'node:14-alpine' }
             steps {
                 sh 'echo fine'
             }
